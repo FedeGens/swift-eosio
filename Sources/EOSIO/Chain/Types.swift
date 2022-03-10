@@ -223,6 +223,10 @@ extension Float32: ABICodable {
     public func abiEncode(to encoder: ABIEncoder) throws {
         try encoder.encode(self.value)
     }
+    
+    public init(from value: Float) {
+        self.value = value
+    }
 }
 
 public struct PermissionLevel: ABICodable, Equatable, Hashable {
