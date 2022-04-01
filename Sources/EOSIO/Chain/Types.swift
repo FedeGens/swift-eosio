@@ -190,6 +190,10 @@ extension Float64: ABICodable {
     public func abiEncode(to encoder: ABIEncoder) throws {
         try encoder.encode(self.value)
     }
+    
+    public init(from value: Double) {
+        self.value = value
+    }
 }
 
 public struct Float32: Equatable, Hashable {
